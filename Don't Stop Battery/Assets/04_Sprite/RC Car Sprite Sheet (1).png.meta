@@ -108,10 +108,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,10 +129,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 224
-        width: 32
-        height: 32
+        width: 16
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,10 +150,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 192
-        width: 32
-        height: 32
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_3
       rect:
         serializedVersion: 2
-        x: 32
+        x: 39
         y: 192
-        width: 32
-        height: 32
+        width: 17
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,10 +192,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 70
         y: 192
-        width: 32
-        height: 32
+        width: 18
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,10 +213,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_5
       rect:
         serializedVersion: 2
-        x: 96
+        x: 102
         y: 192
-        width: 32
-        height: 32
+        width: 18
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,10 +234,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_6
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 9
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,10 +255,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,10 +276,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_8
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
+        x: 72
+        y: 162
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,10 +297,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_9
       rect:
         serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
+        x: 104
+        y: 164
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,10 +318,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_10
       rect:
         serializedVersion: 2
-        x: 128
-        y: 160
-        width: 32
-        height: 32
+        x: 136
+        y: 161
+        width: 16
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -339,10 +339,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_11
       rect:
         serializedVersion: 2
-        x: 160
+        x: 168
         y: 160
-        width: 32
-        height: 32
+        width: 16
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -360,10 +360,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_12
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +381,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_13
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -402,10 +402,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_14
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 128
-        width: 32
-        height: 32
+        width: 17
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -423,10 +423,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_15
       rect:
         serializedVersion: 2
-        x: 96
+        x: 104
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -444,10 +444,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_16
       rect:
         serializedVersion: 2
-        x: 128
+        x: 136
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -465,10 +465,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_17
       rect:
         serializedVersion: 2
-        x: 160
+        x: 168
         y: 128
-        width: 32
-        height: 32
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -486,10 +486,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_18
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -507,10 +507,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_19
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,10 +528,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_20
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -549,10 +549,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_21
       rect:
         serializedVersion: 2
-        x: 96
+        x: 104
         y: 96
-        width: 32
-        height: 32
+        width: 17
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,10 +570,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_22
       rect:
         serializedVersion: 2
-        x: 128
+        x: 136
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -591,10 +591,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_23
       rect:
         serializedVersion: 2
-        x: 160
+        x: 168
         y: 96
-        width: 32
-        height: 32
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -612,10 +612,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_24
       rect:
         serializedVersion: 2
-        x: 0
+        x: 8
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -633,10 +633,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_25
       rect:
         serializedVersion: 2
-        x: 32
+        x: 40
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,10 +654,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_26
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 64
-        width: 32
-        height: 32
+        width: 17
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,10 +675,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_27
       rect:
         serializedVersion: 2
-        x: 96
+        x: 104
         y: 64
-        width: 32
-        height: 32
+        width: 19
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -696,10 +696,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_28
       rect:
         serializedVersion: 2
-        x: 128
+        x: 136
         y: 64
-        width: 32
-        height: 32
+        width: 16
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -717,10 +717,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_29
       rect:
         serializedVersion: 2
-        x: 0
+        x: 40
         y: 32
-        width: 32
-        height: 32
+        width: 17
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -735,34 +735,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RC Car Sprite Sheet (1)_30
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b3d3cabe78af1a4b808765dfd0bb529
-      internalID: -154856944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: RC Car Sprite Sheet (1)_32
       rect:
         serializedVersion: 2
-        x: 96
+        x: 8
         y: 32
-        width: 32
-        height: 32
+        width: 16
+        height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -780,10 +759,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_34
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 104
+        y: 32
+        width: 17
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -801,10 +780,10 @@ TextureImporter:
       name: RC Car Sprite Sheet (1)_35
       rect:
         serializedVersion: 2
-        x: 64
+        x: 8
         y: 0
-        width: 32
-        height: 32
+        width: 17
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -819,55 +798,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RC Car Sprite Sheet (1)_36
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edc262ece5add37448f4ddba9bc97c12
-      internalID: 185269045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: RC Car Sprite Sheet (1)_31
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 958a284209bbb8a4bb7d3403c3844e8a
-      internalID: 1025323301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: RC Car Sprite Sheet (1)_33
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 72
+        y: 32
+        width: 18
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -877,6 +814,69 @@ TextureImporter:
       bones: []
       spriteID: 1204eeb4e703ed9469512bb6d613da34
       internalID: -686233503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RC Car Sprite Sheet (1)_38
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c882d15bb529a12448bb2e1c73e1bc6f
+      internalID: 868369060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RC Car Sprite Sheet (1)_39
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e278f569b72eb4cbeba131d937d8db
+      internalID: 866127426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RC Car Sprite Sheet (1)_40
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 0
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa8a90f920063f45aba1a0fec6085dc
+      internalID: 1904183006
       vertices: []
       indices: 
       edges: []
@@ -923,7 +923,11 @@ TextureImporter:
       RC Car Sprite Sheet (1)_34: -1309424446
       RC Car Sprite Sheet (1)_35: -1024701848
       RC Car Sprite Sheet (1)_36: 185269045
+      RC Car Sprite Sheet (1)_37: 63891902
+      RC Car Sprite Sheet (1)_38: 868369060
+      RC Car Sprite Sheet (1)_39: 866127426
       RC Car Sprite Sheet (1)_4: 908377936
+      RC Car Sprite Sheet (1)_40: 1904183006
       RC Car Sprite Sheet (1)_5: 273275842
       RC Car Sprite Sheet (1)_6: -1081101027
       RC Car Sprite Sheet (1)_7: -601103132

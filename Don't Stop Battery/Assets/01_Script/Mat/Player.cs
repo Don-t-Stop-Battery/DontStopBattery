@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float jumpPower = 10f;
+    float jumpPower = 8f;
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
-    bool ground;
+    bool isGround;
 
     private void Awake()
     {
@@ -18,22 +18,28 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && ground == false)
-        {
-            StartCoroutine("Jump");
-        }
+        Jump();
         GroundCheak();
     }
 
-    IEnumerator Jump()
+    private void Jump()
     {
-        animator.SetBool("Jump", true);
-        rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
-        yield return null;
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
+        {
+            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            isGround = false;
+        }
+        if (isGround == true)
+        {
+            animator.SetBool("Jump", false);
+        }
+        else if(isGround == false)
+        {
+            animator.SetBool("Jump", true);
+        }
     }
     private void GroundCheak()
     {
-        ground = shotRaycast.Shotray();
-        animator.SetBool("Jump", false);
+        isGround = shotRaycast.ShotRay();
     }
 }

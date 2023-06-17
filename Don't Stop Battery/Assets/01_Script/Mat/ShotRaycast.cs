@@ -6,26 +6,27 @@ public class ShotRaycast : MonoBehaviour
 {
     [SerializeField]
     private Vector2 rayDir;
-    private Vector2 shotPos;
-
     [SerializeField]
-    private float distance, yPos;
+    private float distance;
     [SerializeField]
     private LayerMask layerMask;
 
-    private void FixedUpdate()
+    private void Start()
     {
-        shotPos = new Vector2(transform.position.x, transform.position.y - yPos);
+        rayDir.Normalize();
     }
-    public bool Shotray()
+
+    public bool ShotRay()
     {
-        bool ishit= Physics2D.Raycast(transform.position,rayDir,distance,layerMask);
-        return ishit;
+        bool isHit = Physics2D.Raycast(transform.position, rayDir, distance, layerMask);
+
+        return isHit;
     }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
 
-        Gizmos.DrawRay(shotPos, rayDir *distance);
+        Gizmos.DrawRay(transform.position, rayDir * distance);
     }
 }
