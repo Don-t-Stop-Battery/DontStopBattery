@@ -22,9 +22,9 @@ public class Player : MonoBehaviour
         GroundCheak();
     }
 
-    private void Jump()
+    private void Jump()//최영현 메서드
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)//최영현 if문
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             isGround = false;
