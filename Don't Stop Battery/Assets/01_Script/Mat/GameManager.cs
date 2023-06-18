@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,15 +10,21 @@ public class GameManager : MonoBehaviour
     float energy = 100f;
     [SerializeField]
     Slider slider;
-
-    private void Start()
-    {
-        StartCoroutine("EnergyDown");
-    }
+    [SerializeField]
+    TextMeshProUGUI scoreText;
+    float decimalScore;
+    int score;
 
     private void Update()
     {
         EnergyDown();
+        Score();
+        ScoreUpdate();
+    }
+
+    private void ScoreUpdate()
+    {
+        scoreText.text = "Score : " + score;
     }
     public float Energy
     {
@@ -31,10 +38,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Score()
+    {
+        decimalScore += Time.deltaTime;
+        score = Mathf.RoundToInt(decimalScore)*100;
+    }
+
     private void EnergyDown()
     {
         energy-= Time.deltaTime;
         slider.value = energy;
+    }
+
+    public void AddEnergy(int eneryPoint)
+    {
+        energy += eneryPoint;
     }
 
 }
