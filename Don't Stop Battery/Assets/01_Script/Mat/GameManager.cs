@@ -3,17 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    float energy = 100f;
+    [SerializeField] private float energy = 100f;
     [SerializeField]
     Slider slider;
     [SerializeField]
     TextMeshProUGUI scoreText;
+    [SerializeField]
+    Image GameOverPenal;
     float decimalScore;
     int score;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+    private void Start()
+    {
+        StartCoroutine("Score");
+        StartCoroutine("GameOver");
+    }
 
     private void Update()
     {
@@ -26,22 +39,20 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = "Score : " + score;
     }
-    public float Energy
+    public float Energy { get => energy; set => energy = Mathf.Clamp(value, 0, 100); }
+
+    IEnumerator Score()
     {
-        get
+        while (true)
         {
-            return energy;
-        }
-        set
-        {
-            if(energy<0) energy = value;
+            decimalScore += Time.deltaTime;
+            score = Mathf.RoundToInt(decimalScore)*100;
+            yield return null;
         }
     }
-
-    private void Score()
+    private void StopScore()
     {
-        decimalScore += Time.deltaTime;
-        score = Mathf.RoundToInt(decimalScore)*100;
+        StopCoroutine("Score");
     }
 
     private void EnergyDown()
@@ -53,6 +64,20 @@ public class GameManager : MonoBehaviour
     public void AddEnergy(int eneryPoint)
     {
         energy += eneryPoint;
+        energy = Mathf.Clamp(energy, 0, 100);
+    }
+    IEnumerator GameOver()
+    {
+        while (true)
+        {
+            if (energy <= 0)
+            {
+                StopScore();
+                GameOverPenal.gameObject.SetActive(true);
+                GameOverPenal.DOFade(0.6f, 0.5f);
+            }
+                yield return null;
+        }
     }
 
 }
