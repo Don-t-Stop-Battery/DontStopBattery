@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         GroundCheak();
     }
 
-    private void Jump()//최영현 메서드
+    private void Jump() //최영현 메서드
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGround == true)//최영현 if문
         {
@@ -41,5 +41,12 @@ public class Player : MonoBehaviour
     private void GroundCheak()
     {
         isGround = shotRaycast.ShotRay();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Obstaccle"))
+        {
+            GameManager.instance.Energy -= 5f;
+        }
     }
 }
