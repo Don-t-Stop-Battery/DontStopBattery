@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 8d1414e02cdc44d418f100b0937b5a3f
+<<<<<<<< HEAD:Don't Stop Battery/Assets/03_Animation/Jump.anim.meta
+guid: 59bb9d7531a03e74daa77a8e3887311e
+========
+guid: e7cd5c2cb668b6c41aa0f45fa0912859
+>>>>>>>> Pat:Don't Stop Battery/Assets/05_TileMap/Obstacle/staticObjects__1.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000

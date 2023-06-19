@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: e6b9b44320f4448d9d5e0ee634259966
+<<<<<<<< HEAD:Don't Stop Battery/Assets/TextMesh Pro/Examples & Extras/Materials/Crate - Surface Shader Scene.mat.meta
+guid: eac531736fe25524f9f804e5168ffcd3
+========
+guid: 69c7492f885931049b4b3dbe63ce5199
+>>>>>>>> Pat:Don't Stop Battery/Assets/05_TileMap/Obstacle/staticObjects__100.asset.meta
 NativeFormatImporter:
   userData: 
   assetBundleName: 

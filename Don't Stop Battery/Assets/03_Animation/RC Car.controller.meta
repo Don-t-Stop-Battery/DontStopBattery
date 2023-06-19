@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 9549ee2edd15377489dfe732cbf3e6d2
+<<<<<<<< HEAD:Don't Stop Battery/Assets/03_Animation/RC Car.controller.meta
+guid: f55268b8f3effad46877542e2cd29383
+========
+guid: 7658681012c3ad34e9af4301c99e789b
+>>>>>>>> Pat:Don't Stop Battery/Assets/05_TileMap/Obstacle/staticObjects__10.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 9100000

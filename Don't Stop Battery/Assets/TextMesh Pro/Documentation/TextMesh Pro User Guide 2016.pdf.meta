@@ -1,6 +1,11 @@
 fileFormatVersion: 2
-guid: 1b8d251f9af63b746bf2f7ffe00ebb9b
+<<<<<<<< HEAD:Don't Stop Battery/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta
+guid: d8be5c220a552d048953c497ad6fa445
 DefaultImporter:
+========
+guid: 075e3f2414033c04dba63490a777c8a8
+PrefabImporter:
+>>>>>>>> Pat:Don't Stop Battery/Assets/05_TileMap/Obstacle/Obstacle.prefab.meta
   externalObjects: {}
   userData: 
   assetBundleName: 

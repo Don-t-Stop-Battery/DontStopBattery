@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 977dbc75983e7704195b61c3a2c9551e
+<<<<<<<< HEAD:Don't Stop Battery/Assets/04_Sprite/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/spring__124.asset.meta
+guid: 187feeadc3ad92743b5ef7ce7f59f64b
+========
+guid: 08a51fc8eaa2a814d9e0fd693ac6c82e
+>>>>>>>> Pat:Don't Stop Battery/Assets/05_TileMap/Spring/spring__124.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
