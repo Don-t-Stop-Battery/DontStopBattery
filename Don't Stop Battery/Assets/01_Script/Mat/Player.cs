@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float jumpPower = 8f;
+    [SerializeField] float jumpPower = 8f;
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
@@ -22,9 +22,9 @@ public class Player : MonoBehaviour
         GroundCheak();
     }
 
-    private void Jump()//ÃÖ¿µÇö ¸Þ¼­µå
+    private void Jump()//ï¿½Ö¿ï¿½ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)//ÃÖ¿µÇö if¹®
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)//ï¿½Ö¿ï¿½ï¿½ï¿½ ifï¿½ï¿½
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             isGround = false;
