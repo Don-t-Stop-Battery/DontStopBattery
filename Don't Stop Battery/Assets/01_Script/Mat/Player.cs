@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     {
         Jump();
         GroundCheak();
+        Dead();
     }
 
     private void Jump()
@@ -88,4 +89,11 @@ public class Player : MonoBehaviour
         HitStop();
     }
 
+    void Dead()
+    {
+        if (GameManager.instance.IsDead == true)
+        {
+            animator.SetTrigger("Dead");
+        }
+    }
 }

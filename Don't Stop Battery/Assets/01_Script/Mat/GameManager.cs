@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     float decimalScore;
     int score;
     int coin = 0;
+    bool isDead = false;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
         EnergyDown();
         Score();
         ScoreUpdate();
+        CoinUpdate();
     }
 
     private void ScoreUpdate()
@@ -48,7 +50,9 @@ public class GameManager : MonoBehaviour
     }
     public float Energy { get => energy; set => energy = Mathf.Clamp(value, 0, 100); }
 
-    public int Coin { get => coin; set => energy = value; }
+    public int Coin { get => coin; set => coin = value; }
+
+    public bool IsDead { get => isDead; set => isDead = value; }
 
     IEnumerator Score()
     {
@@ -81,6 +85,7 @@ public class GameManager : MonoBehaviour
         {
             if (energy <= 0)
             {
+                isDead = true;
                 StopScore();
                 GameOverPenal.gameObject.SetActive(true);
                 GameOverPenal.DOFade(0.6f, 0.5f);
