@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class San : MonoBehaviour
 {
     [SerializeField] float jumpPower = 8f;
     Animator animator;
@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     ShotRaycast shotRaycast;
     SpriteRenderer spriteRenderer;
     BoxCollider2D boxCollider;
+    Rigidbody2D rig;    // pat
     bool isGround;
     bool isHit;
 
@@ -20,11 +21,13 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         shotRaycast = GetComponent<ShotRaycast>();
+        rig = GetComponent<Rigidbody2D>();  // pat
     }
     private void Update()
     {
         Jump();
         GroundCheak();
+        Test();     //pat
     }
 
     private void Jump()
@@ -51,14 +54,16 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
+            Debug.Log("피격");
             animator.SetBool("Hit", true);
             isHit = true;
             GameManager.instance.Energy -= 5f;
         }
         if (collision.CompareTag("Coin"))
         {
+            Debug.Log("코인");
             GameManager.instance.Coin += 1;
-            Destroy(collision);
+            Destroy(collision.gameObject);
         }
     }
 
@@ -85,6 +90,22 @@ public class Player : MonoBehaviour
         }
         isHit = false;
         HitStop();
+    }
+
+            // Pat
+    private bool _coolTime = false;
+    private void Test(){
+        if(Input.GetKey(KeyCode.E) && _coolTime == false){
+            Debug.Log("산데비스탄!!!!!!!!");
+            rig.velocity = new Vector2(0, -30);
+            StartCoroutine(Sandevistan());
+        }
+    }
+
+    IEnumerator Sandevistan(){
+        _coolTime = true;   
+        yield return new WaitForSeconds(0.5f);
+        _coolTime = false;
     }
 
 }

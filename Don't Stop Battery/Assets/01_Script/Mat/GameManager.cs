@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     }
     public float Energy { get => energy; set => energy = Mathf.Clamp(value, 0, 100); }
 
-    public int Coin { get => coin; set => energy = value; }
+    public int Coin { get => coin; set => coin = value; }
 
     IEnumerator Score()
     {
