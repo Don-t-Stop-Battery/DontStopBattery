@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI scoreText;
     [SerializeField]
     Image GameOverPenal;
+    [SerializeField]
+    TextMeshProUGUI coinText;
     float decimalScore;
     int score;
     int coin = 0;
@@ -39,6 +41,10 @@ public class GameManager : MonoBehaviour
     private void ScoreUpdate()
     {
         scoreText.text = "Score : " + score;
+    }
+    public void CoinUpdate()
+    {
+        coinText.text = ": " + coin;
     }
     public float Energy { get => energy; set => energy = Mathf.Clamp(value, 0, 100); }
 
