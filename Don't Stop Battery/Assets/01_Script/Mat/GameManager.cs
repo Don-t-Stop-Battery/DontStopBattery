@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     Image GameOverPenal;
     float decimalScore;
     int score;
+    int coin = 0;
 
     private void Awake()
     {
@@ -40,6 +41,8 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score : " + score;
     }
     public float Energy { get => energy; set => energy = Mathf.Clamp(value, 0, 100); }
+
+    public int Coin { get => coin; set => energy = value; }
 
     IEnumerator Score()
     {
