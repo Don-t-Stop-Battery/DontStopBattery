@@ -8,10 +8,15 @@ public class Player : MonoBehaviour
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
+    SpriteRenderer spriteRenderer;
+    BoxCollider2D boxCollider;
     bool isGround;
+    bool isHit;
 
     private void Awake()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         shotRaycast = GetComponent<ShotRaycast>();
@@ -22,9 +27,9 @@ public class Player : MonoBehaviour
         GroundCheak();
     }
 
-    private void Jump() //�ֿ��� �޼���
+    private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)//�ֿ��� if��
+        if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
         {
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             isGround = false;
@@ -44,9 +49,43 @@ public class Player : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstaccle"))
+        if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
+            animator.SetBool("Hit", true);
+            isHit = true;
             GameManager.instance.Energy -= 5f;
         }
+        if (collision.CompareTag("Coin"))
+        {
+            GameManager.instance.Coin += 1;
+            Destroy(collision);
+        }
+       
     }
+
+    public void Hit()
+    {
+        StartCoroutine("HitEnemy");
+    }
+    public void HitStop()
+    {
+        StopCoroutine("HitEnemy");
+    }
+    IEnumerator HitEnemy()
+    {
+        animator.SetBool("Hit", false);
+        int count = 0;
+
+        while (count < 3)
+        {
+            spriteRenderer.color = new Color(1, 1, 1, 0.3f);
+            yield return new WaitForSeconds(0.25f);
+            spriteRenderer.color = new Color(1, 1, 1, 1f);
+            yield return new WaitForSeconds(0.25f);
+            count++;
+        }
+        isHit = false;
+        HitStop();
+    }
+
 }
