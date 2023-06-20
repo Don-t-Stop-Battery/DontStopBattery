@@ -6,14 +6,16 @@ public class RandomObstacle : MonoBehaviour
 {
     [SerializeField] private GameObject[] _obstacle;
     [SerializeField] private float _delayTime;
+    [SerializeField] private Transform[] _spawnPos;
     private void Start() {
         StartCoroutine(Obstacle());
     }
 
     IEnumerator Obstacle(){
         while(true){
+            int spawnRand = Random.Range(0, 3);
             int rand = Random.Range(0, 4);
-            Instantiate(_obstacle[rand], transform.position, Quaternion.identity);
+            Instantiate(_obstacle[rand], _spawnPos[spawnRand].position, Quaternion.identity);
             yield return new WaitForSeconds(_delayTime);
         }
     }

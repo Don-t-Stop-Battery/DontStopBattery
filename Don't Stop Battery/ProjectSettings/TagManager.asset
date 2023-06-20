@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Obstaccle
+  - Coin
+  - Battery
   layers:
   - Default
   - TransparentFX
