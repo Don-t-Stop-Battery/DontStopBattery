@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float jumpPower = 8f;
+    [SerializeField] private float _sanPower = 30f;
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
@@ -27,8 +28,12 @@ public class Player : MonoBehaviour
     private void Update()
     {
         Jump();
-        GroundCheak();
         Dead();
+    }
+    private void FixedUpdate()
+    {
+        GroundCheak();
+        Test();
     }
 
     private void Jump()
@@ -55,6 +60,7 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
+            StartCoroutine(More());
             animator.SetBool("Hit", true);
             isHit = true;
             GameManager.instance.Energy -= 5f;
@@ -99,5 +105,34 @@ public class Player : MonoBehaviour
         {
             animator.SetTrigger("Dead");
         }
+    }
+    private bool _coolTime = false;
+    private void Test()
+    {
+        if (Input.GetKey(KeyCode.E) && _coolTime == false)
+        {
+            Debug.Log("»êµ¥ºñ½ºÅº!!!!!!!!");
+            rigid.AddForce(Vector2.down * _sanPower, ForceMode2D.Impulse);
+            //rigid.velocity = new Vector2(0, -27);
+            StartCoroutine(Sandevistan());
+        }
+    }
+
+    IEnumerator Sandevistan()
+    {
+        _coolTime = true;
+        yield return new WaitForSeconds(0.3f);
+        _coolTime = false;
+    }
+
+    IEnumerator More()
+    {
+        Time.timeScale = 0.25f;
+        for (int i = 0; i < 3; i++)
+        {
+            Time.timeScale += 0.25f;
+            yield return new WaitForSeconds(0.25f);
+        }
+        Time.timeScale = 1f;
     }
 }
