@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class San : MonoBehaviour
 {
     [SerializeField] float jumpPower = 8f;
     [SerializeField] private float _sanPower = 30f; //pat
+    [SerializeField] Image bar;
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
@@ -24,7 +26,6 @@ public class San : MonoBehaviour
     }
     private void Update()
     {
-       
         Jump();
     }
 
@@ -61,6 +62,8 @@ public class San : MonoBehaviour
         if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
             Debug.Log("피격");
+            bar.color = new Color(1, 0, 0, 1);
+            StartCoroutine(Red());
             StartCoroutine(More());
             animator.SetBool("Hit", true);
             isHit = true;
@@ -124,6 +127,11 @@ public class San : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
         Time.timeScale = 1f;
+    }
+
+    IEnumerator Red(){
+        yield return new WaitForSeconds(0.3f);
+        bar.color = new Color(0, 1, 0.3859544f, 1);
     }
 
 }

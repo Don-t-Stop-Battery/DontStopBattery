@@ -1691,7 +1691,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 50}
+  m_SizeDelta: {x: 700, y: 70}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &993056345
 MonoBehaviour:
@@ -1956,7 +1956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1094102516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.307545, y: 0.85796356, z: 0.51212245}
+  m_LocalPosition: {x: 12, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1975,7 +1975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547a0ee0e55256944894a77f790dda9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ene: {fileID: 0}
+  _ene: {fileID: 5528013224098860860, guid: 85a671d3efc54e34b92f546ddb1094cf, type: 3}
   _reSpawn: 0
 --- !u!1 &1336467406
 GameObject:
@@ -3219,6 +3219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 15
   _sanPower: 30
+  bar: {fileID: 564939384}
 --- !u!1 &2022491325
 GameObject:
   m_ObjectHideFlags: 0
@@ -3252,6 +3253,7 @@ MonoBehaviour:
   slider: {fileID: 993056345}
   scoreText: {fileID: 1666060476}
   GameOverPenal: {fileID: 609524207}
+  coinText: {fileID: 0}
 --- !u!4 &2022491327
 Transform:
   m_ObjectHideFlags: 0
