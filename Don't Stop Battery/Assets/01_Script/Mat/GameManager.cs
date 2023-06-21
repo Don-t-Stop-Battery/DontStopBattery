@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine("Score");
         StartCoroutine("GameOver");
+        UpdateCoin();
     }
 
     private void Update()
