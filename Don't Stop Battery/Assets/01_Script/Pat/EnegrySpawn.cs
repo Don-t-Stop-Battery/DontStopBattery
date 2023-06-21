@@ -12,7 +12,7 @@ public class EnegrySpawn : MonoBehaviour
     }
     IEnumerator Spawn(){
         while(true){
-            float rand = Random.Range(0.8f, 3f);
+            float rand = Random.Range(5f, 7f);
             rand *= 10;
             rand = (int)rand;
             rand /= 10;
