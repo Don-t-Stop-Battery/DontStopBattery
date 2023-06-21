@@ -13,8 +13,6 @@ public class San : MonoBehaviour
     BoxCollider2D boxCollider;
     bool isGround;
     bool isHit;
-    
-    private bool _isJump;
 
     private void Awake()
     {
@@ -46,7 +44,7 @@ public class San : MonoBehaviour
             isGround = false;
             rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
-        if (isGround == true)
+        if (isGround == true)   
         {
             animator.SetBool("Jump", false);
         }
@@ -58,12 +56,14 @@ public class San : MonoBehaviour
     private void GroundCheak()
     {
         isGround = shotRaycast.ShotRay();
+        //_isJump = isGround;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
             Debug.Log("피격");
+            StartCoroutine(More());
             animator.SetBool("Hit", true);
             isHit = true;
             GameManager.instance.Energy -= 5f;
@@ -104,9 +104,6 @@ public class San : MonoBehaviour
             // Pat
     private bool _coolTime = false;
     private void Test(){
-        if(isGround == false && _isJump == true){
-            rigid.velocity = new Vector2(0, 0);
-        }
         if(Input.GetKey(KeyCode.E) && _coolTime == false){
             Debug.Log("산데비스탄!!!!!!!!");
             rigid.AddForce(Vector2.down * _sanPower, ForceMode2D.Impulse);
@@ -119,6 +116,16 @@ public class San : MonoBehaviour
         _coolTime = true;   
         yield return new WaitForSeconds(0.3f);
         _coolTime = false;
+    }
+
+    IEnumerator More()
+    {
+        Time.timeScale = 0.25f;
+        for(int i = 0; i < 3; i++){
+            Time.timeScale += 0.25f;
+            yield return new WaitForSeconds(0.25f);
+        }
+        Time.timeScale = 1f;
     }
 
 }

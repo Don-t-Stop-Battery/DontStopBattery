@@ -15,7 +15,7 @@ public class RandomObstacle : MonoBehaviour
         while(true){
             int spawnRand = Random.Range(0, 3);
             int rand = Random.Range(0, 4);
-            float de = Random.Range(0.8f, 1.8f);
+            float de = Random.Range(0.7f,1.7f);
             de *= 10;
             de = (int)de;
             de /= 10;

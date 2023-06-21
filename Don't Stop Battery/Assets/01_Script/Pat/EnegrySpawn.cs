@@ -17,7 +17,6 @@ public class EnegrySpawn : MonoBehaviour
             rand = (int)rand;
             rand /= 10;
             _reSpawn = rand;
-            Debug.Log(rand);
             yield return new WaitForSeconds(_reSpawn);
         }
     }
