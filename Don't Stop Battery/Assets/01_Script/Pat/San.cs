@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class San : MonoBehaviour
 {
     [SerializeField] float jumpPower = 8f;
+    [SerializeField] private float _sanPower = 30f; //pat
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
     BoxCollider2D boxCollider;
     bool isGround;
     bool isHit;
+    
+    private bool isJump;
 
     private void Awake()
     {
@@ -23,17 +26,25 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
-        Jump();
+        /* Jump();
         GroundCheak();
-        Dead();
+        Test();     //pat */
+        Jump();
+    }
+
+    //pat
+    private void FixedUpdate() {
+        GroundCheak();
+        Test();     
     }
 
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
         {
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            Debug.Log("???");
             isGround = false;
+            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
         if (isGround == true)
         {
@@ -52,14 +63,16 @@ public class Player : MonoBehaviour
     {
         if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
+            Debug.Log("피격");
             animator.SetBool("Hit", true);
             isHit = true;
             GameManager.instance.Energy -= 5f;
         }
         if (collision.CompareTag("Coin"))
         {
+            Debug.Log("코인");
             GameManager.instance.Coin += 1;
-            Destroy(collision);
+            Destroy(collision.gameObject);
         }
     }
 
@@ -88,11 +101,24 @@ public class Player : MonoBehaviour
         HitStop();
     }
 
-    void Dead()
-    {
-        if (GameManager.instance.IsDead == true)
-        {
-            animator.SetTrigger("Dead");
+            // Pat
+    private bool _coolTime = false;
+    private void Test(){
+        if(isGround == true && isJump == true){
+            rigid.velocity = new Vector2(0, 0);
         }
+        if(Input.GetKey(KeyCode.E) && _coolTime == false){
+            Debug.Log("산데비스탄!!!!!!!!");
+            rigid.AddForce(Vector2.down * _sanPower, ForceMode2D.Impulse);
+            //rigid.velocity = new Vector2(0, -27);
+            StartCoroutine(Sandevistan());
+        }   
     }
+
+    IEnumerator Sandevistan(){
+        _coolTime = true;   
+        yield return new WaitForSeconds(0.3f);
+        _coolTime = false;
+    }
+
 }
