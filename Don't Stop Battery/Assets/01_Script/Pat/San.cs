@@ -14,7 +14,7 @@ public class San : MonoBehaviour
     bool isGround;
     bool isHit;
     
-    private bool isJump;
+    private bool _isJump;
 
     private void Awake()
     {
@@ -104,7 +104,7 @@ public class San : MonoBehaviour
             // Pat
     private bool _coolTime = false;
     private void Test(){
-        if(isGround == true && isJump == true){
+        if(isGround == false && _isJump == true){
             rigid.velocity = new Vector2(0, 0);
         }
         if(Input.GetKey(KeyCode.E) && _coolTime == false){
