@@ -15,9 +15,12 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI scoreText;
     [SerializeField]
     Image GameOverPenal;
+    [SerializeField]
+    TextMeshProUGUI coinText;
     float decimalScore;
     int score;
     int coin = 0;
+    bool isDead;
 
     private void Awake()
     {
@@ -40,9 +43,16 @@ public class GameManager : MonoBehaviour
     {
         scoreText.text = "Score : " + score;
     }
+
+    public void UpdateCoin()
+    {
+        coinText.text = ": " + coin;
+    }
     public float Energy { get => energy; set => energy = Mathf.Clamp(value, 0, 100); }
 
     public int Coin { get => coin; set => coin = value; }
+    
+    public bool IsDead { get => isDead; set => isDead = value; }
 
     IEnumerator Score()
     {

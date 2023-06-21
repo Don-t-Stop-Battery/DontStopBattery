@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     ShotRaycast shotRaycast;
     SpriteRenderer spriteRenderer;
     BoxCollider2D boxCollider;
+    AudioSource audioSource;
     bool isGround;
     bool isHit;
 
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         shotRaycast = GetComponent<ShotRaycast>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -59,7 +61,9 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Coin"))
         {
             GameManager.instance.Coin += 1;
-            Destroy(collision);
+            GameManager.instance.UpdateCoin();
+            audioSource.Play();
+            Destroy(collision.gameObject);
         }
     }
 
