@@ -2,23 +2,23 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] float jumpPower = 8f;
     [SerializeField] private float _sanPower = 30f;
+    [SerializeField] Image bar;
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
     SpriteRenderer spriteRenderer;
-    BoxCollider2D boxCollider;
     AudioSource audioSource;
     bool isGround;
     bool isHit;
 
     private void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -61,9 +61,11 @@ public class Player : MonoBehaviour
         if (collision.CompareTag("Obstaccle")&&isHit == false)
         {
             StartCoroutine(More());
+            bar.color = new Color(1, 0, 0, 1);
+            StartCoroutine(Red());
             animator.SetBool("Hit", true);
             isHit = true;
-            GameManager.instance.Energy -= 5f;
+            GameManager.instance.Energy -= 10f;
         }
         if (collision.CompareTag("Coin"))
         {
@@ -134,5 +136,10 @@ public class Player : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
         }
         Time.timeScale = 1f;
+    }
+    IEnumerator Red()
+    {
+        yield return new WaitForSeconds(0.3f);
+        bar.color = new Color(0, 1, 0.3859544f, 1);
     }
 }
