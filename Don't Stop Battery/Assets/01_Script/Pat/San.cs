@@ -5,14 +5,16 @@ using UnityEngine;
 public class San : MonoBehaviour
 {
     [SerializeField] float jumpPower = 8f;
+    [SerializeField] private float _sanPower = 30f; //pat
     Animator animator;
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
     SpriteRenderer spriteRenderer;
     BoxCollider2D boxCollider;
-    Rigidbody2D rig;    // pat
     bool isGround;
     bool isHit;
+    
+    private bool isJump;
 
     private void Awake()
     {
@@ -21,21 +23,28 @@ public class San : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         shotRaycast = GetComponent<ShotRaycast>();
-        rig = GetComponent<Rigidbody2D>();  // pat
     }
     private void Update()
     {
-        Jump();
+        /* Jump();
         GroundCheak();
-        Test();     //pat
+        Test();     //pat */
+        Jump();
+    }
+
+    //pat
+    private void FixedUpdate() {
+        GroundCheak();
+        Test();     
     }
 
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGround == true)
         {
-            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            Debug.Log("???");
             isGround = false;
+            rigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
         if (isGround == true)
         {
@@ -95,16 +104,20 @@ public class San : MonoBehaviour
             // Pat
     private bool _coolTime = false;
     private void Test(){
+        if(isGround == true && isJump == true){
+            rigid.velocity = new Vector2(0, 0);
+        }
         if(Input.GetKey(KeyCode.E) && _coolTime == false){
             Debug.Log("산데비스탄!!!!!!!!");
-            rig.velocity = new Vector2(0, -30);
+            rigid.AddForce(Vector2.down * _sanPower, ForceMode2D.Impulse);
+            //rigid.velocity = new Vector2(0, -27);
             StartCoroutine(Sandevistan());
-        }
+        }   
     }
 
     IEnumerator Sandevistan(){
         _coolTime = true;   
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         _coolTime = false;
     }
 

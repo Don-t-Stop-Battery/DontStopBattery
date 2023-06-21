@@ -1940,6 +1940,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1094102517}
+  - component: {fileID: 1094102518}
   m_Layer: 0
   m_Name: EnergySpawn
   m_TagString: Untagged
@@ -1962,6 +1963,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1094102518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094102516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547a0ee0e55256944894a77f790dda9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ene: {fileID: 0}
+  _reSpawn: 0
 --- !u!1 &1336467406
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPower: 15
+  _sanPower: 30
 --- !u!1 &2022491325
 GameObject:
   m_ObjectHideFlags: 0
