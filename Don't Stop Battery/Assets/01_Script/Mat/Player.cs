@@ -11,14 +11,12 @@ public class Player : MonoBehaviour
     Rigidbody2D rigid;
     ShotRaycast shotRaycast;
     SpriteRenderer spriteRenderer;
-    BoxCollider2D boxCollider;
     AudioSource audioSource;
     bool isGround;
     bool isHit;
 
     private void Awake()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -63,7 +61,7 @@ public class Player : MonoBehaviour
             StartCoroutine(More());
             animator.SetBool("Hit", true);
             isHit = true;
-            GameManager.instance.Energy -= 5f;
+            GameManager.instance.Energy -= 10f;
         }
         if (collision.CompareTag("Coin"))
         {

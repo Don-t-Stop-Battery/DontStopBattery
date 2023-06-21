@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour
     {
         energy-= Time.deltaTime;
         slider.value = energy;
+        
     }
 
     public void AddEnergy(int eneryPoint)
@@ -86,6 +87,7 @@ public class GameManager : MonoBehaviour
             if (energy <= 0)
             {
                 StopScore();
+                isDead = true;
                 GameOverPenal.gameObject.SetActive(true);
                 GameOverPenal.DOFade(0.6f, 0.5f);
             }
