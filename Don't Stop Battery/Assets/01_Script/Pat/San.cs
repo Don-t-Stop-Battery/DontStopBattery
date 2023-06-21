@@ -24,9 +24,7 @@ public class San : MonoBehaviour
     }
     private void Update()
     {
-        /* Jump();
-        GroundCheak();
-        Test();     //pat */
+       
         Jump();
     }
 
