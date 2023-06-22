@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    [SerializeField] private int _ObstacleSpeed;
-    
+    [SerializeField] public int _obstacleSpeed;
     private void Start() {
+        _obstacleSpeed = GameManager.instance.up;
         StartCoroutine(Move());
     }
 
@@ -15,8 +15,9 @@ public class Obstacle : MonoBehaviour
             if(transform.position.x < -17.89f){
                 Destroy(gameObject, 1f);
             }
-            transform.position += Vector3.left * _ObstacleSpeed * Time.deltaTime;
+            transform.position += Vector3.left * _obstacleSpeed * Time.deltaTime;
             yield return null;
         }
     }
+
 }

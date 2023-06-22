@@ -32,7 +32,7 @@ public class San : MonoBehaviour
     //pat
     private void FixedUpdate() {
         GroundCheak();
-        Test();     
+        Sande();     
     }
 
     private void Jump()
@@ -104,11 +104,10 @@ public class San : MonoBehaviour
 
             // Pat
     private bool _coolTime = false;
-    private void Test(){
+    private void Sande(){
         if(Input.GetKey(KeyCode.E) && _coolTime == false){
             Debug.Log("산데비스탄!!!!!!!!");
             rigid.AddForce(Vector2.down * _sanPower, ForceMode2D.Impulse);
-            //rigid.velocity = new Vector2(0, -27);
             StartCoroutine(Sandevistan());
         }   
     }

@@ -22,15 +22,26 @@ public class GameManager : MonoBehaviour
     int coin = 0;
     bool isDead;
 
+    bool power;
+
+    public int up = 17;
+    public float eee = 3;
+
     private void Awake()
     {
         instance = this;
+        up = 17;
+        eee = 3;
     }
     private void Start()
     {
         StartCoroutine("Score");
         StartCoroutine("GameOver");
+        StartCoroutine(bo());
+        StartCoroutine(E());
         UpdateCoin();
+        up = 17;
+        eee = 3;
     }
 
     private void Update()
@@ -69,11 +80,19 @@ public class GameManager : MonoBehaviour
         StopCoroutine("Score");
     }
 
+    public void Goodpower(){
+        power = true;
+    }
+
+    public void oldpower(){
+        power = false;
+    }
     private void EnergyDown()
     {
-        energy-= Time.deltaTime;
-        slider.value = energy;
-        
+        if(power == false){
+            energy-= Time.deltaTime * eee;
+            slider.value = energy;
+        }
     }
 
     public void AddEnergy(int eneryPoint)
@@ -91,9 +110,24 @@ public class GameManager : MonoBehaviour
                 isDead = true;
                 GameOverPenal.gameObject.SetActive(true);
                 GameOverPenal.DOFade(0.6f, 0.5f);
+                StartCoroutine(ho());
             }
                 yield return null;
         }
     }
 
+    IEnumerator ho(){
+        yield return new WaitForSeconds(0.5f);
+        Time.timeScale = 0;
+    }
+
+    IEnumerator bo(){
+        yield return new WaitForSeconds(7.5f);
+        up += 2;
+    }
+
+    IEnumerator E(){
+        yield return new WaitForSeconds(12.5f);
+        eee += 0.5f;
+    }
 }

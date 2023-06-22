@@ -7,7 +7,7 @@ public class Energy : MonoBehaviour
     [SerializeField] AudioSource ele;
     [SerializeField] SpriteRenderer sp;
     [SerializeField] PolygonCollider2D po;
-    [SerializeField] private int _ObstacleSpeed;
+    [SerializeField] private int _obstacleSpeed;
 
     private void Awake() {
         ele = GetComponent<AudioSource>();
@@ -15,6 +15,7 @@ public class Energy : MonoBehaviour
         po = GetComponent<PolygonCollider2D>();
     }
     private void Start() {
+        _obstacleSpeed = GameManager.instance.up;
         StartCoroutine(Move());
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -40,7 +41,7 @@ public class Energy : MonoBehaviour
             if(transform.position.x < -17.89f){
                 Destroy(gameObject, 1f);
             }
-            transform.position += Vector3.left * _ObstacleSpeed * Time.deltaTime;
+            transform.position += Vector3.left * _obstacleSpeed * Time.deltaTime;
             yield return null;
         }
     }

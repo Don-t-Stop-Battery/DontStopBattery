@@ -10,6 +10,7 @@ public class SkyMove : MonoBehaviour
     void Start()
     {
         StartCoroutine(BackMove());
+        StartCoroutine(bo());
     }
 
     IEnumerator BackMove(){
@@ -21,4 +22,10 @@ public class SkyMove : MonoBehaviour
             yield return null;
         }
     }
+
+    IEnumerator bo(){
+        yield return new WaitForSeconds(12.5f);
+        _speed += 2;
+    }
 }
+
