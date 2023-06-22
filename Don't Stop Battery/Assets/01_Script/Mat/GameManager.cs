@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
             energy-= Time.deltaTime * eee;
             slider.value = energy;
         }
+        slider.value = energy;
     }
 
     public void AddEnergy(int eneryPoint)
@@ -122,12 +123,12 @@ public class GameManager : MonoBehaviour
     }
 
     IEnumerator bo(){
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(5f);
         up += 2;
     }
 
     IEnumerator E(){
-        yield return new WaitForSeconds(12.5f);
-        eee += 0.5f;
+        yield return new WaitForSeconds(5f);
+        eee += 1.5f;
     }
 }

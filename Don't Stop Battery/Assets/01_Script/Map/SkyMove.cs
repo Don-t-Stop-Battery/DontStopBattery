@@ -24,7 +24,7 @@ public class SkyMove : MonoBehaviour
     }
 
     IEnumerator bo(){
-        yield return new WaitForSeconds(12.5f);
+        yield return new WaitForSeconds(5f);
         _speed += 2;
     }
 }

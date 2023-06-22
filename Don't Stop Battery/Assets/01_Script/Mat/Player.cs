@@ -39,11 +39,13 @@ public class Player : MonoBehaviour
 
     private void Power()
     {
-        if(Input.GetKeyDown(KeyCode.P) && powerOn == false){
+        if(Input.GetKeyDown(KeyCode.P) && powerOn == false && GameManager.instance.Coin >= 100){
             audioSource[3].Play();
             powerOn = true;
             animator.SetTrigger("Power");
             StartCoroutine("Boom");
+            GameManager.instance.Coin -= 100;
+            GameManager.instance.UpdateCoin();
             GameManager.instance.Goodpower();
             isHit = true;
         }

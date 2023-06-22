@@ -22,7 +22,7 @@ public class Ground : MonoBehaviour
     }
 
     IEnumerator bo(){
-        yield return new WaitForSeconds(7.5f);
+        yield return new WaitForSeconds(5f);
         _groundSpeed += 2;
     }
 
